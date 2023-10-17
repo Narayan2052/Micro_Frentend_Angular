@@ -1,0 +1,49 @@
+                        -:  Micro-Frentend-Angular :-
+            _______________________________________________________
+
+> Micro frentend is used to multiple applications we can run as one application.
+1.how to create Micro-Frentend-Angular?
+  we can create by using module fedaration.which is new feature of webpack 5.
+
+Types Of Micro-Frentend-Angular:-
+    > Mono-Repo
+    > Multi-Repo
+
+MONO-REPO (or) MONO-WORKSPACE :-
+    > mono-repository is used to create multiple applications in one mono-workspace.
+
+    > if we run this command     ng new "mono-workspace"
+       it will create defaulty mono-workspace and angular app.but i want only mono work space that's why
+    > ng new "name" --createApplication="false"
+            
+            files:- node_modules,
+                    .editorconfig,
+                    .gitignore,
+                    angular.json,
+                    package-lock.json,
+                    package.json,
+                    README.md,
+                    tsconfig.json,
+                    tslint.json         these files only will create
+
+    > How To Create Application in mono-repo?
+        ng g application "host-app" --routing --style=scss               application will create and routing enable and style file format setted
+        
+        # after run this command project folder will create automatically
+
+        # if we create multiple applications also node_modules will not create for each and every application.mono-space node_modules only.
+    
+    > how we can run two application?
+        ng serve host-app -o 
+        ng s mfe-app -o
+
+        # these two applications will run different ports
+
+    > How to install webpack 5?
+        npm i webpack webpack-cli --save-dev
+    
+    > How to ADD Module Federation to Application?
+        ng add @angular-architects/module-federation --project host-app --port 4100     
+            
+            # defaulty these port only. will run for this application.we can chekck in angular.json in this application in serve property.
+
